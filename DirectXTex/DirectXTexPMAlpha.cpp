@@ -41,7 +41,7 @@ namespace
             {
                 XMVECTOR v = *ptr;
                 XMVECTOR alpha = XMVectorSplatW(*ptr);
-                alpha = XMVectorMultiply(v, alpha);
+                alpha = XMVectorMultiply(v, alpha); // This will break P&D luminescent non occluding yet emitting pixels?
                 *(ptr++) = XMVectorSelect(v, alpha, g_XMSelect1110);
             }
 
@@ -84,7 +84,7 @@ namespace
             {
                 XMVECTOR v = *ptr;
                 XMVECTOR alpha = XMVectorSplatW(*ptr);
-                alpha = XMVectorMultiply(v, alpha);
+                alpha = XMVectorMultiply(v, alpha); // This will break P&D luminescent non occluding yet emitting pixels?
                 *(ptr++) = XMVectorSelect(v, alpha, g_XMSelect1110);
             }
 
